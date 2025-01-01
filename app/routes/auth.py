@@ -4,4 +4,4 @@ auth_bp = Blueprint('auth', __name__)
 
 @auth_bp.route("/register")
 def register():
-    return render_template("register.html")
+    return render_template("01_auth/register.html")
