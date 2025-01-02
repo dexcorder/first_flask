@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-    <link rel="icon" type="icon" href="assets/images/favicon.png" />
+    <link rel="icon" type="icon" href="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/favicon.png"")") }} }} />
     <title>Home page</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">    
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="{{ url_for("static", filename="{{ url_for("static", filename="assets/css/styles.css">")") }} }}
     <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="{{ url_for("static", filename="{{ url_for("static", filename="assets/css/custom.css">")") }} }}
 </head>
 
 <body>
@@ -25,7 +25,7 @@
             <!-- Left section: Logo -->
             <a href="index.html" class="flex items-center">
               <div>
-                  <img src="assets/images/template-white-logo.png" alt="Logo" class="h-14 w-auto mr-4">
+                  <img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/template-white-logo.png"")") }} }} alt="Logo" class="h-14 w-auto mr-4">
               </div>
             </a>
 
@@ -107,7 +107,7 @@
                   class="bg-primary border border-primary hover:bg-transparent text-white hover:text-primary font-semibold px-4 py-2 rounded-full inline-block">Login</a>
               <div class="relative group cart-wrapper">
                   <a href="/cart.html" >
-                      <img src="assets/images/cart-shopping.svg" alt="Cart" class="h-6 w-6 group-hover:scale-120">
+                      <img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/cart-shopping.svg"")") }} }} alt="Cart" class="h-6 w-6 group-hover:scale-120">
                   </a>
                   <!-- Cart dropdown -->
                   <div class="absolute right-0 mt-1 w-80 bg-white shadow-lg p-4 rounded hidden group-hover:block">
@@ -115,7 +115,7 @@
                           <!-- product item -->
                           <div class="flex items-center justify-between pb-4 border-b border-gray-line">
                               <div class="flex items-center">
-                                  <img src="/assets/images/single-product/1.jpg" alt="Product" class="h-12 w-12 object-cover rounded mr-2">
+                                  <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/single-product/1.jpg"")") }} }} alt="Product" class="h-12 w-12 object-cover rounded mr-2">
                                   <div>
                                       <p class="font-semibold">Summer black dress</p>
                                       <p class="text-sm">Quantity: 1</p>
@@ -126,7 +126,7 @@
                           <!-- product item -->
                           <div class="flex items-center justify-between">
                             <div class="flex items-center">
-                                <img src="/assets/images/single-product/2.jpg" alt="Product" class="h-12 w-12 object-cover rounded mr-2">
+                                <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/single-product/2.jpg"")") }} }} alt="Product" class="h-12 w-12 object-cover rounded mr-2">
                                 <div>
                                     <p class="font-semibold">Black suit</p>
                                     <p class="text-sm">Quantity: 1</p>
@@ -139,7 +139,7 @@
                   </div>
               </div>
               <a id="search-icon" href="javascript:void(0);" class="text-white hover:text-secondary group">
-                  <img src="assets/images/search-icon.svg" alt="Search"
+                  <img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/search-icon.svg"")") }} }} alt="Search"
                       class="h-6 w-6 transition-transform transform group-hover:scale-120">
               </a>
               <!-- Search field -->
@@ -216,7 +216,7 @@
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
-                    <img src="assets/images/main-slider/5.jpg" alt="Product 1">
+                    <img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/main-slider/5.jpg"")") }} }} alt="Product 1">
                     <div class="swiper-slide-content">
                       <h2 class="text-3xl md:text-7xl font-bold text-white mb-2 md:mb-4">Women</h2>
                       <p class="mb-4 text-white md:text-2xl">Experience the best in sportswear with <br>our latest collection.</p>
@@ -227,7 +227,7 @@
                 </div>
                 <!-- Slide 2 -->
                 <div class="swiper-slide">
-                    <img src="assets/images/main-slider/2.png" alt="Product 2">
+                    <img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/main-slider/2.png"")") }} }} alt="Product 2">
                     <div class="swiper-slide-content">
                       <h2 class="text-3xl md:text-7xl font-bold text-white mb-2 md:mb-4">Men</h2>
                       <p class="mb-4 text-white md:text-2xl">Discover the latest trends in Men`s <br>sportswear and casual fashion.</p>
@@ -238,7 +238,7 @@
                 </div>
                 <!-- Slide 3 -->
                 <div class="swiper-slide">
-                    <img src="assets/images/main-slider/4.jpg" alt="Product 3">
+                    <img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/main-slider/4.jpg"")") }} }} alt="Product 3">
                     <div class="swiper-slide-content">
                       <h2 class="text-3xl md:text-7xl font-bold text-white mb-2 md:mb-4">Accessories</h2>
                       <p class="mb-4 text-white md:text-2xl">Elevate your style with our latest <br>sportswear collection.</p>
@@ -261,7 +261,7 @@
                 <!-- Category 1 -->
                 <div class="w-full sm:w-1/3 px-4 mb-8">
                     <div class="category-banner relative overflow-hidden rounded-lg shadow-lg group">
-                        <img src="/assets/images/cat-image1.jpg" alt="Category 1" class="w-full h-auto">
+                        <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/cat-image1.jpg"")") }} }} alt="Category 1" class="w-full h-auto">
                         <div class="absolute inset-0 bg-gray-light bg-opacity-50"></div>
                         <div
                             class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
@@ -275,7 +275,7 @@
                 <!-- Category 2 -->
                 <div class="w-full sm:w-1/3 px-4 mb-8">
                     <div class="category-banner relative overflow-hidden rounded-lg shadow-lg group">
-                        <img src="/assets/images/cat-image4.jpg" alt="Category 2" class="w-full h-auto">
+                        <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/cat-image4.jpg"")") }} }} alt="Category 2" class="w-full h-auto">
                         <div class="absolute inset-0 bg-gray-light bg-opacity-50"></div>
                         <div
                             class="category-text absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4 transition duration-300">
@@ -289,7 +289,7 @@
                 <!-- Category 3 -->
                 <div class="w-full sm:w-1/3 px-4 mb-8">
                     <div class="category-banner relative overflow-hidden rounded-lg shadow-lg group">
-                        <img src="/assets/images/cat-image5.jpg" alt="Category 3" class="w-full h-auto">
+                        <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/cat-image5.jpg"")") }} }} alt="Category 3" class="w-full h-auto">
                         <div class="absolute inset-0 bg-gray-light bg-opacity-50"></div>
                         <div
                             class="category-text absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4 transition duration-300">
@@ -312,7 +312,7 @@
                 <!-- Product 1 -->
                 <div class="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8">
                   <div class="bg-white p-3 rounded-lg shadow-lg">
-                    <img src="assets/images/products/1.jpg" alt="Product 1" class="w-full object-cover mb-4 rounded-lg">
+                    <img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/products/1.jpg"")") }} }} alt="Product 1" class="w-full object-cover mb-4 rounded-lg">
                     <a href="#" class="text-lg font-semibold mb-2">Summer black dress</a>
                     <p class="my-2">Women</p>
                     <div class="flex items-center mb-4">
@@ -325,7 +325,7 @@
                 <!-- Product 2 -->
                 <div class="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8">
                   <div class="bg-white p-3 rounded-lg shadow-lg">
-                    <img src="assets/images/products/2.jpg" alt="Product 2" class="w-full object-cover mb-4 rounded-lg">
+                    <img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/products/2.jpg"")") }} }} alt="Product 2" class="w-full object-cover mb-4 rounded-lg">
                     <a href="#" class="text-lg font-semibold mb-2">Black suit</a>
                     <p class=" my-2">Women</p>
                     <div class="flex items-center mb-4">
@@ -337,7 +337,7 @@
                 <!-- Product 3 -->
                 <div class="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8">
                   <div class="bg-white p-3 rounded-lg shadow-lg">
-                    <img src="assets/images/products/3.jpg" alt="Product 3" class="w-full object-cover mb-4 rounded-lg">
+                    <img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/products/3.jpg"")") }} }} alt="Product 3" class="w-full object-cover mb-4 rounded-lg">
                     <a href="#" class="text-lg font-semibold mb-2">Black long dress</a>
                     <p class=" my-2">Women, Accessories</p>
                     <div class="flex items-center mb-4">
@@ -350,7 +350,7 @@
                 <!-- Product 4 -->
                 <div class="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8">
                   <div class="bg-white p-3 rounded-lg shadow-lg">
-                    <img src="assets/images/products/4.jpg" alt="Product 4" class="w-full object-cover mb-4 rounded-lg">
+                    <img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/products/4.jpg"")") }} }} alt="Product 4" class="w-full object-cover mb-4 rounded-lg">
                     <a href="#" class="text-lg font-semibold">Black leather jacket</a>
                     <p class="my-2">Women</p>
                     <div class="flex items-center mb-4">
@@ -372,7 +372,7 @@
                 <!-- Product 1 -->
                 <div class="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8">
                   <div class="bg-white p-3 rounded-lg shadow-lg">
-                    <img src="assets/images/products/5.jpg" alt="Product 1" class="w-full object-cover mb-4 rounded-lg">
+                    <img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/products/5.jpg"")") }} }} alt="Product 1" class="w-full object-cover mb-4 rounded-lg">
                     <a href="#" class="text-lg font-semibold mb-2">Blue women's suit</a>
                     <p class=" my-2">Women</p>
                     <div class="flex items-center mb-4">
@@ -385,7 +385,7 @@
                 <!-- Product 2 -->
                 <div class="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8">
                   <div class="bg-white p-3 rounded-lg shadow-lg">
-                    <img src="assets/images/products/6.jpg" alt="Product 2" class="w-full object-cover mb-4 rounded-lg">
+                    <img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/products/6.jpg"")") }} }} alt="Product 2" class="w-full object-cover mb-4 rounded-lg">
                     <a href="#" class="text-lg font-semibold mb-2">White shirt with long sleeves</a>
                     <p class=" my-2">Women</p>
                     <div class="flex items-center mb-4">
@@ -397,7 +397,7 @@
                 <!-- Product 3 -->
                 <div class="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8">
                   <div class="bg-white p-3 rounded-lg shadow-lg">
-                    <img src="assets/images/products/7.jpg" alt="Product 3" class="w-full object-cover mb-4 rounded-lg">
+                    <img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/products/7.jpg"")") }} }} alt="Product 3" class="w-full object-cover mb-4 rounded-lg">
                     <a href="#" class="text-lg font-semibold mb-2">Yellow men's suit</a>
                     <p class="my-2">Men</p>
                     <div class="flex items-center mb-4">
@@ -410,7 +410,7 @@
                 <!-- Product 4 -->
                 <div class="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8">
                   <div class="bg-white p-3 rounded-lg shadow-lg">
-                    <img src="assets/images/products/8.jpg" alt="Product 4" class="w-full object-cover mb-4 rounded-lg">
+                    <img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/products/8.jpg"")") }} }} alt="Product 4" class="w-full object-cover mb-4 rounded-lg">
                     <a href="#" class="text-lg font-semibold mb-2">Red dress</a>
                     <p class="my-2">Women</p>
                     <div class="flex items-center mb-4">
@@ -435,37 +435,37 @@
                 <div class="swiper-wrapper">
                     <!-- Brand Logo 1 -->
                     <div class="swiper-slide flex-none bg-gray-200 flex items-center justify-center rounded-md">
-                        <img src="/assets/images/brands/html.svg" alt="Client Logo" class="max-h-full max-w-full">
+                        <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/brands/html.svg"")") }} }} alt="Client Logo" class="max-h-full max-w-full">
                     </div>
 
                     <!-- Brand Logo 2 -->
                     <div class="swiper-slide flex-none bg-gray-200 flex items-center justify-center rounded-md">
-                        <img src="/assets/images/brands/js.svg" alt="Client Logo" class="max-h-full max-w-full">
+                        <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/brands/js.svg"")") }} }} alt="Client Logo" class="max-h-full max-w-full">
                     </div>
 
                     <!-- Brand Logo 3 -->
                     <div class="swiper-slide flex-none bg-gray-200 flex items-center justify-center rounded-md">
-                        <img src="/assets/images/brands/laravel.svg" alt="Client Logo" class="max-h-full max-w-full">
+                        <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/brands/laravel.svg"")") }} }} alt="Client Logo" class="max-h-full max-w-full">
                     </div>
 
                     <!-- Brand Logo 4 -->
                     <div class="swiper-slide flex-none bg-gray-200 flex items-center justify-center rounded-md">
-                        <img src="/assets/images/brands/php.svg" alt="Client Logo" class="max-h-full max-w-full">
+                        <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/brands/php.svg"")") }} }} alt="Client Logo" class="max-h-full max-w-full">
                     </div>
 
                     <!-- Brand Logo 5 -->
                     <div class="swiper-slide flex-none bg-gray-200 flex items-center justify-center rounded-md">
-                        <img src="/assets/images/brands/react.svg" alt="Client Logo" class="max-h-full max-w-full">
+                        <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/brands/react.svg"")") }} }} alt="Client Logo" class="max-h-full max-w-full">
                     </div>
 
                     <!-- Brand Logo 6 -->
                     <div class="swiper-slide flex-none bg-gray-200 flex items-center justify-center rounded-md">
-                        <img src="/assets/images/brands/tailwind.svg" alt="Client Logo" class="max-h-full max-w-full">
+                        <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/brands/tailwind.svg"")") }} }} alt="Client Logo" class="max-h-full max-w-full">
                     </div>
 
                     <!-- Brand Logo 7 -->
                     <div class="swiper-slide flex-none bg-gray-200 flex items-center justify-center rounded-md">
-                      <img src="/assets/images/brands/typescript.svg" alt="Client Logo" class="max-h-full max-w-full">
+                      <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/brands/typescript.svg"")") }} }} alt="Client Logo" class="max-h-full max-w-full">
                     </div>
                 </div>
                 <div class="swiper-button-prev"></div>
@@ -475,7 +475,7 @@
 
     <!-- Banner section -->
     <section id="banner" class="relative my-16">
-        <div class="container mx-auto px-4 py-20 rounded-lg relative bg-cover bg-center" style="background-image: url('assets/images/banner1.jpg');">
+        <div class="container mx-auto px-4 py-20 rounded-lg relative bg-cover bg-center" style="background-image: url('{{ url_for("static", filename="{{ url_for("static", filename="assets/images/banner1.jpg');">")") }} }}
             <div class="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
             <div class="relative flex flex-col items-center justify-center h-full text-center text-white py-20">
                 <h2 class="text-4xl font-bold mb-4">Welcome to Our Shop</h2>
@@ -497,7 +497,7 @@
       <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl">
           <div class="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3">
               <div class="flex flex-col p-6 bg-white rounded-xl shadow-lg">
-                  <img class="object-cover object-center w-full mb-8 rounded-xl" src="/assets/images/fashion-trends.jpg" alt="blog">
+                  <img class="object-cover object-center w-full mb-8 rounded-xl" src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/fashion-trends.jpg"")") }} }} alt="blog">
                   <h2 class="mb-2 text-xs font-semibold tracking-widest text-primary uppercase">Fashion Trends</h2>
                   <h1 class="mb-4 text-2xl font-semibold leading-none tracking-tighter text-gray-dark lg:text-3xl">Latest Shirt Trends for 2024</h1>
                   <p class="flex-grow text-base font-medium leading-relaxed text-gray-txt">Explore the hottest shirt trends of 2024. From bold prints to classic styles, stay ahead of the fashion curve with our expert insights.</p>
@@ -506,7 +506,7 @@
                   </div>
               </div>
               <div class="flex flex-col p-6 bg-white rounded-xl shadow-lg">
-                  <img class="object-cover object-center w-full mb-8 rounded-xl" src="/assets/images/stylisng-tips.jpg" alt="blog">
+                  <img class="object-cover object-center w-full mb-8 rounded-xl" src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/stylisng-tips.jpg"")") }} }} alt="blog">
                   <h2 class="mb-2 text-xs font-semibold tracking-widest text-primary uppercase">Styling Tips</h2>
                   <h1 class="mb-4 text-2xl font-semibold leading-none tracking-tighter text-gray-dark lg:text-3xl">How to Style Your Shirt for Any Occasion</h1>
                   <p class="flex-grow text-base font-medium leading-relaxed text-gray-txt">Learn how to style your shirt for different occasions, whether it's a casual day out or a formal event. Get tips from fashion experts.</p>
@@ -515,7 +515,7 @@
                   </div>
               </div>
               <div class="flex flex-col p-6 bg-white rounded-xl shadow-lg">
-                  <img class="object-cover object-center w-full mb-8 rounded-xl" src="/assets/images/customer-stories.jpg" alt="blog">
+                  <img class="object-cover object-center w-full mb-8 rounded-xl" src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/customer-stories.jpg"")") }} }} alt="blog">
                   <h2 class="mb-2 text-xs font-semibold tracking-widest text-primary uppercase">Customer Stories</h2>
                   <h1 class="mb-4 text-2xl font-semibold leading-none tracking-tighter text-gray-dark lg:text-3xl">Real Stories from Our Happy Customers</h1>
                   <p class="flex-grow text-base font-medium leading-relaxed text-gray-txt">Read about the experiences of our customers. Discover how our shirts have made a difference in their lives and their personal style.</p>
@@ -587,23 +587,23 @@
               <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
               <ul>
                 <li class="flex items-center mb-2">
-                  <img src="/assets/images/social_icons/facebook.svg" alt="Facebook" class="w-4 h-4 transition-transform transform hover:scale-110 mr-2">
+                  <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/social_icons/facebook.svg"")") }} }} alt="Facebook" class="w-4 h-4 transition-transform transform hover:scale-110 mr-2">
                   <a href="#" class="hover:text-primary">Facebook</a>
                 </li>
                 <li class="flex items-center mb-2">
-                  <img src="/assets/images/social_icons/twitter.svg" alt="Twitter" class="w-4 h-4 transition-transform transform hover:scale-110 mr-2">
+                  <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/social_icons/twitter.svg"")") }} }} alt="Twitter" class="w-4 h-4 transition-transform transform hover:scale-110 mr-2">
                   <a href="#" class="hover:text-primary">Twitter</a>
                 </li>
                 <li class="flex items-center mb-2">
-                  <img src="/assets/images/social_icons/instagram.svg" alt="Instagram" class="w-4 h-4 transition-transform transform hover:scale-110 mr-2">
+                  <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/social_icons/instagram.svg"")") }} }} alt="Instagram" class="w-4 h-4 transition-transform transform hover:scale-110 mr-2">
                   <a href="#" class="hover:text-primary">Instagram</a>
                 </li>
                 <li class="flex items-center mb-2">
-                  <img src="/assets/images/social_icons/pinterest.svg" alt="Instagram" class="w-4 h-4 transition-transform transform hover:scale-110 mr-2">
+                  <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/social_icons/pinterest.svg"")") }} }} alt="Instagram" class="w-4 h-4 transition-transform transform hover:scale-110 mr-2">
                   <a href="#" class="hover:text-primary">Pinterest</a>
                 </li>
                 <li class="flex items-center mb-2">
-                  <img src="/assets/images/social_icons/youtube.svg" alt="Instagram" class="w-4 h-4 transition-transform transform hover:scale-110 mr-2">
+                  <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/social_icons/youtube.svg"")") }} }} alt="Instagram" class="w-4 h-4 transition-transform transform hover:scale-110 mr-2">
                   <a href="#" class="hover:text-primary">YouTube</a>
                 </li>
               </ul>
@@ -611,7 +611,7 @@
             <!-- Contact Information -->
             <div class="w-full sm:w-2/6 px-4 mb-8">
               <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-              <p><img src="assets/images/template-logo.png" alt="Logo" class="h-[60px] mb-4"></p>
+              <p><img src="{{ url_for("static", filename="{{ url_for("static", filename="assets/images/template-logo.png"")") }} }} alt="Logo" class="h-[60px] mb-4"></p>
               <p>123 Street Name, Paris, France</p>
               <p class="text-xl font-bold my-4">Phone: (123) 456-7890</p>
               <a href="mailto:info@company.com" class="underline">Email: info@company.com</a>
@@ -634,9 +634,9 @@
             </div>
             <!-- Payment Icons -->
             <div class="w-full lg:w-1/4 text-center lg:text-right">
-              <img src="/assets/images/social_icons/paypal.svg" alt="PayPal" class="inline-block h-8 mr-2">
-              <img src="/assets/images/social_icons/stripe.svg" alt="Stripe" class="inline-block h-8 mr-2">
-              <img src="/assets/images/social_icons/visa.svg" alt="Visa" class="inline-block h-8">
+              <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/social_icons/paypal.svg"")") }} }} alt="PayPal" class="inline-block h-8 mr-2">
+              <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/social_icons/stripe.svg"")") }} }} alt="Stripe" class="inline-block h-8 mr-2">
+              <img src="/{{ url_for("static", filename="{{ url_for("static", filename="assets/images/social_icons/visa.svg"")") }} }} alt="Visa" class="inline-block h-8">
             </div>
           </div>
         </div>
@@ -644,7 +644,7 @@
 
     <script src="node_modules/swiper/swiper-bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <script src="assets/js/script.js"></script>
+    <script src="{{ url_for("static", filename="{{ url_for("static", filename="assets/js/script.js"></script>")") }} }}
 
 </body>
 </html>
